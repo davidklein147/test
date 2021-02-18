@@ -1,0 +1,20 @@
+<!-- <div *ngFor="let i of listGleasses" class="m-5 row">
+
+    <div class="col-5">
+        <div class="card " style="width: 18rem;">
+            <img src='/assets/images.jpg' class="card-img-top" [alt]="i.name">
+            <div class="card-body">
+                <p class="card-text">color: {{i.info}}</p>
+                <p class="card-text">info: {{i.info}}</p>
+                <input type="radio" name="glasse" value="i.name">
+                <button class="btn btn-danger m-2"  [routerLink]='["/lens"]' (click)= choose(i)>choose</button>
+            </div>
+        </div>
+    </div>
+</div> -->
+<div *ngFor = "let i of typeLens">
+   <label><input type="radio" name="lens" value="i"> {{i}} </label> 
+
+
+<button class="btn btn-danger m-2"  [routerLink]='["/numbers"]' (click)= choose(i)>choose</button>
+</div>
