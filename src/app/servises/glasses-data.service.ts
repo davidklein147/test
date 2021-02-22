@@ -83,11 +83,10 @@ export class GlassesDataService {
   }
 
   addNumbers(a: numbers): void {
-    
-    this.orderData.numbers.right = a.right;
-    this.orderData.numbers.left = a.left;
-    this.orderData.numbers.cRight = a.cRight;
-    this.orderData.numbers.cLeft = a.cLeft;
+   for (const key in this.orderData.numbers) {
+     this.orderData.numbers[key] = a[key];
+   }
+   
     console.log(this.orderData.numbers);
   }
 
